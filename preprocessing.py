@@ -15,7 +15,7 @@ class preprocessing(object):
 		words = review_text.lower().split()
 
 		if remove_stopwords:
-			stops = set(remove_stopwords('english'))
+			stops = set(stopwords.words('english'))
 			words = [w for w in words if not w in stops]
 
 		stemmer = SnowballStemmer('english')
